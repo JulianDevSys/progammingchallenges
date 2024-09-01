@@ -1,17 +1,5 @@
-""" 
-from os import system
-from time import sleep
 
-
-fila = ['*', '*', '*', ' ', ' ', ' ', ' ', ' ']
-
-
-for i in range(100000):
-    fila.append(fila.pop(0))
-    print(fila)
-    sleep(0.5)
-    system('cls')
- """
+#diferentes formas de eliminar un repetido en un arreglo
 
 # Dado un arreglo de numeros enteros eliminar los repetidos no se vale usar set(conjuntos)
 l1 = [1, 2, 2, 5, 3, 4, 5, 6, 4, 4, 4, 4, 4, 4, 4, 4, 3]  # 1,2,3,4,5,6
@@ -29,6 +17,7 @@ while i < limit:
     i += 1
 
 print(l1)
+
 # Solucion 2
 l3 = []
 for i in l1:
@@ -36,6 +25,7 @@ for i in l1:
         l3.append(i)
 
 print(l3)
+
 # solucion 3
 l4 = []
 l1 = [1, 2, 2, 5, 3, 4, 5, 6, 4, 4, 4, 4, 4, 4, 4, 4, 3]  # 1,2,3,4,5,6

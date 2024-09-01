@@ -12,7 +12,7 @@ print(buscar_elemento([1,2,3,6,9,4,7],6)) """
 
 
 
-#ejercicio hormiga
+#ejercicio hormiga forma 1
 import random
 import math
 def mover_hormiga(n):
@@ -62,7 +62,7 @@ def mover_hormiga(n):
 
 
 
-
+#ejercicio hormiga forma mas optima
 from random import randint,choice
 def simulation():
     limits = [100,100] #x , y
