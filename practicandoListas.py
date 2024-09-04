@@ -13,11 +13,8 @@ pares.remove(2) #quita el elemneto que se encuentre en la lista
 print(pares) """
 
 
-
-
 #crea una lista con numeros del 1 al 10 y despues recorrerlos con un bucle y solo imprimir los numeros pares
 """ 
-
 pares= [1,2,3,4,5,6,7,8,9,10]
 for i in pares :
     if  i %2 != 0:
@@ -30,13 +27,6 @@ edades= [20,20,23,31]
 for i in zip(nombres,edades):
     print(i) """
 
-pares= []
-impares=[]
-for i in range(1, 101):
-    if not i%2== 0:
-        impares.append(i)
-    else:
-        pares.append(i)
         
 
     

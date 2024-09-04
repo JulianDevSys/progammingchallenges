@@ -119,24 +119,22 @@ for i in range(tamaño-1,-1,-1):
 print(arreglo2) """
 
 
-   
-#determinar si una palabra es palindrome
+#ejercicio  de FizzBuzz
+""" Escribe una función que imprima los números del 1 al 100. Pero para múltiplos de tres, 
+imprime "Fizz" en lugar del número, y para los múltiplos de cinco, imprime "Buzz".
+Para números que son múltiplos de ambos tres y cinco, imprime "FizzBuzz". """
 
-""" lista= [0,1,2,1,0,9]
-palindrome= []
-tamaño=len(lista)
-for i in range(tamaño-1,-1,-1):
-    palindrome.append(lista[i])
-
-for i in range(tamaño):
-    if lista[i]== palindrome[i]:
-        bandera= True
-    else:
-        bandera=False
-if bandera==True:
-    print("el arreglo es un palindrome")
-else:
-    print("el arreglo no es un palindrome") """
+def FizzBuzz():
+    for i in range(1,101):
+        if i%3 == 0 and i%5==0:
+            print("fizbuzz")
+        elif i%3 == 0:
+            print("fizz")
+        elif i%5==0:
+            print("buzz")
+        else:
+            print(i)
+FizzBuzz()
     
         
 

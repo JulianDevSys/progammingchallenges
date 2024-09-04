@@ -45,34 +45,10 @@ for i in range(1, factorial):
   print(factorial)
  """
 
-#/// hacer un palindromo///////
 
-def es_palindromo(palabra):
-#    palabra = palabra.lower().replace(" ", "")
-# metodo palabra[::-1] invierte la cadena
-#funciona [inicio:fin:paso] al omitir las dos primeras y colocar -1 empieza de atras hacia adelante
-
-        if palabra == palabra[::-1]:
-            print(f'"{palabra}" es un palíndromo.')
-        else:
-            print(f'"{palabra}" no es un palíndromo.')
-es_palindromo("anilina")
-            
-""" def verificar_palabras(cadena):
-    palabras = cadena.split(" ")
-    for palabra in palabras:
-        if es_palindromo(palabra):
-            print(f'"{palabra}" es un palíndromo.')
-        else:
-            print(f'"{palabra}" no es un palíndromo.') """
-
-# Ejemplo de uso
-#cadena = "Reconocer Ana radar nivel"
-#verificar_palabras(cadena)
- 
 #///////////////////ejercicios////////////////
 
-""" def verificar ():
+def verificar ():
     alumnos =[
         {'nombre': "julian",
         'edad': 19},
@@ -89,10 +65,11 @@ es_palindromo("anilina")
     profesor= alumnos[-1]['nombre']
     asistente= alumnos[0]['nombre']
     return profesor, asistente
-profesor,asistente= verificar()  
-print(profesor, asistente)  
- """
-""" 
+profesor,asistente= verificar() 
+ 
+#print(profesor, asistente)  
+
+ 
 #creamos la funcion compañeros
 def obtener_compañeros(cantidad_compañeros):
 #creamos la lista donde vamos a guardar todos los valores
@@ -118,7 +95,7 @@ def obtener_compañeros(cantidad_compañeros):
     return asistente,profesor
 asis,prof= obtener_compañeros(3)
 print(asis,prof)
- """
+
 
 
 
