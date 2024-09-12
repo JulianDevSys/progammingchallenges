@@ -67,3 +67,32 @@ lpc = 0  # No se calcula lpc ya que no se está acumulando te
 upi = (dt / fin) / NUM_cupos  # Uso promedio de la instalación
 print("Uso promedio de la instalación = %.2f" % upi)
 print("\n---------------------------------------------------------------------")
+
+
+######################################## simulacion peluqueria ########################################
+
+def hair_salon(env,customer, hairdresser):
+    time_arrive= env.now
+    departure_time= random.randint(20, 55)
+    print(f"{customer} llego a la peluqueria a los {time_arrive} minutos") 
+    with hairdresser.request() as quantityHairDresser:
+        yield quantityHairDresser
+        On_hold= env.now - time_arrive
+        if On_hold <=35:
+            print(f"el {customer} entro a la peluqueria, esperó  {On_hold} minutos")
+        else:
+            return print(f"el {customer}se fue, esperó mucho tiempo por su peluqueada, mas de 35 minutos")
+        
+        yield env.timeout(departure_time)
+        print(f"el {customer} salio de la peluqueria a los {env.now} minutos")
+        
+def quantity_customers(env,hair):
+    number_customers= 20
+    for i in range(1,number_customers ):
+        env.process(hair_salon(env, f"cliente {i}", hairdresser))
+        yield env.timeout(5)
+        
+env= simpy.Environment()       
+hairdresser= simpy.Resource(env,capacity=2)  
+env.process(quantity_customers(env,hair_salon)) 
+env.run(250)
