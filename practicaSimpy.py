@@ -79,7 +79,6 @@ env.run(20)
 #terminar ejercicio despues, ir mejorando el codigo
 #777777777777777777777777777777777777777777777777777777777777777777
 
-
 def parqueadero(env, car, parking):
     salida_automovil= random.randint(10,50)
     tiempoEn_fila=10
